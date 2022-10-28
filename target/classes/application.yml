@@ -1,0 +1,15 @@
+files:
+  filePath: /var/file/
+  docservice:
+    convert-docs: .docm|.dotx|.dotm|.dot|.doc|.odt|.fodt|.ott|.xlsm|.xltx|.xltm|.xlt|.xls|.ods|.fods|.ots|.pptm|.ppt|.ppsx|.ppsm|.pps|.potx|.potm|.pot|.odp|.fodp|.otp|.rtf|.mht|.html|.htm|.xml|.epub|.fb2
+    edited-docs: .docx|.xlsx|.csv|.pptx|.txt
+    viewed-docs: .pdf|.djvu|.xps
+    url:
+      site: 1.117.157.161:81
+      converter: ConvertService.ashx
+      command: coauthoring/CommandService.ashx
+      api: web-apps/apps/api/documents/api.js
+      preloader: web-apps/apps/api/documents/cache-scripts.html
+
+server:
+  port: 8080
