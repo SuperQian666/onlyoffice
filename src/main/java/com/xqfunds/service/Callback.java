@@ -76,7 +76,6 @@ public class Callback {
                     if (savedFile.exists()) {
                         savedFile.delete();
                     }*/
-
                     try (FileOutputStream out = new FileOutputStream(fileDir)) {
                         int read;
                         final byte[] bytes = new byte[1024];
@@ -91,11 +90,9 @@ public class Callback {
                     saveSuccessfully = false;
                     ex.printStackTrace();
                 }
-                if (saveSuccessfully) {
-                    System.out.println("保存成功");
-                }
             }
-
+            writer.write("{\"error\":" + saved + "}");
+            System.out.println("保存成功");
         } catch (org.json.simple.parser.ParseException e) {
             System.out.println("保存异常");
             writer.write("{\"error\":\"-1\"}");
