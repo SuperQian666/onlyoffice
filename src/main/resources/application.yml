@@ -1,5 +1,6 @@
 files:
-  filePath: /var/file/11.txt
+  filePath: /var/file
+  savePath: /var/file/11.txt
   docservice:
     convert-docs: .docm|.dotx|.dotm|.dot|.doc|.odt|.fodt|.ott|.xlsm|.xltx|.xltm|.xlt|.xls|.ods|.fods|.ots|.pptm|.ppt|.ppsx|.ppsm|.pps|.potx|.potm|.pot|.odp|.fodp|.otp|.rtf|.mht|.html|.htm|.xml|.epub|.fb2
     edited-docs: .docx|.xlsx|.csv|.pptx|.txt
