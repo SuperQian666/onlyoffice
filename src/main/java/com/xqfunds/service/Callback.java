@@ -53,7 +53,7 @@ public class Callback {
             JSONParser parser = new JSONParser();
             JSONObject jsonObj = (JSONObject) parser.parse(body);
             int status = Integer.parseInt(jsonObj.get("status").toString());
-            //System.out.println(jsonObj.toJSONString());
+            System.out.println(jsonObj.toJSONString());
             int saved = 0;
             //statusAPI见下表
             if (status == 2 || status == 3 || status == 6) {

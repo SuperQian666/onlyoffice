@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onlyoffice</title>
+</head>
+
+<body>
+<div id="placeholder"></div>
+<script type="text/javascript" src="http://1.117.157.161:81/web-apps/apps/api/documents/api.js"></script>
+<script>
+    var docEditor = new DocsAPI.DocEditor("placeholder", {//placeholder为要放入的位置
+        "document": {
+            "fileType": "txt",//文件类型
+            "key": "dqwcewe",//docserver会通过key读取缓存，如果文档进行修改要修改key值
+            "title": "1",//显示文档标题
+            "url": "http://1.117.157.161:8080/onlyofficeLoad?file=11.txt"//可以为静态地址，也可为方法地址
+        },
+        "documentType": "text",//onlyoffice可打开word、excel、ppt==
+        "editorConfig": {
+            "callbackUrl": "http://1.117.157.161:8080/generateReport",//回调地址，一定要保证docserver可以请求到，否则开不开文件
+            "lang": "zh-CN",
+            "mode": "edit",//只读view,编辑edit
+            "permissions":{
+                "comment": false,//是否可以评论
+                "download": false,//是否可以下载
+                "edit": true,//是否可以编辑
+                "fillForms": true,//
+                "print": false,//是否可以打印
+                "review": true,//
+            },
+            "height": "800px",
+            "width": "100%"
+        }});
+</script>
+
+</body>
+
+</html>
+
+
