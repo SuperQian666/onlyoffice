@@ -56,7 +56,7 @@ public class Callback {
             System.out.println(jsonObj.toJSONString());
             int saved = 0;
             //statusAPI见下表
-            if (status == 2 || status == 3 || status == 6) {
+            if (status == 2 || status == 3 || status == 6 || status == 1) {
                 String downloadUri = (String) jsonObj.get("url");
                 boolean saveSuccessfully = true;
                 try {
