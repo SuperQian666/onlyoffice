@@ -25,7 +25,7 @@ import java.util.Scanner;
 @Controller
 public class Callback {
 
-    @Value("${files.filePath}")
+    @Value("${files.savePath}")
     private String filePath;
 
 
