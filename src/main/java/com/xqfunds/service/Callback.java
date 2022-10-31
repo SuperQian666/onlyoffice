@@ -32,6 +32,8 @@ public class Callback {
     @RequestMapping(value = "/generateReport", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     @ResponseBody
     public void generateReport(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("callback:===================");
+        System.out.printf("request sent host: %s\n", request.getRemoteHost());
         PrintWriter writer = null;
         try{
             String body = "";

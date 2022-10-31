@@ -24,6 +24,8 @@ public class onlyofficeLoad {
     @RequestMapping("/onlyofficeLoad")
     @ResponseBody
     public void onlyofficeLoad(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println("load:===================");
+        System.out.printf("request sent host: %s\n", request.getRemoteHost());
         response.reset();
         String fileName = request.getParameter("file");
         fileName = URLEncoder.encode(fileName, "UTF-8");
